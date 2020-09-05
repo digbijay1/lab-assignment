@@ -258,10 +258,9 @@ const matrix = [
 function maximumProduct(matrix){
   var max = 0, result; 
   
-  // iterate the rows. 
+  
   for (var i = 0; i < n; i++)  
   { 
-  // iterate the columns. 
   for (var j = 0; j < n; j++)  
   { 
       // check the maximum product 
@@ -274,8 +273,7 @@ function maximumProduct(matrix){
           max = result; 
       } 
 
-      // check the maximum product 
-      // in vertical row. 
+      
       if ((i - 3) >= 0)  
       { 
       result = arr[i][j] * arr[i - 1][j] *  
@@ -285,8 +283,6 @@ function maximumProduct(matrix){
           max = result; 
       } 
 
-      // check the maximum product in 
-      // diagonal and anti - diagonal 
       if ((i - 3) >= 0 && (j - 3) >= 0)  
       { 
       result = arr[i][j] * arr[i - 1][j - 1] *  
