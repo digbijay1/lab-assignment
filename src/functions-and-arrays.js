@@ -102,6 +102,62 @@ function add(mixedArr) {
 
 
 // Progression #4: Calculate the average
+const arr = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
+
+function avg(arr) {
+  var sum = [];
+  var sum1 = []
+  var sum2 = []
+  var final_result = 0;
+  for (var i = 0; i < arr.length; i++) {
+
+    if (typeof arr[i] === "number") {
+      sum.push(arr[i])
+
+    } else if (typeof arr[i] === "string") {
+      sum1.push(arr[i].length)
+    } else {
+      sum2.push(arr[i])
+    }
+
+  }
+
+
+  var sum3 = []
+  for (var i = 0; i < sum2.length; i++) {
+    if (sum2[i] == true) {
+      sum3.push(1)
+    } else {
+      sum3.push(0)
+    }
+  }
+  var final_result = 0
+  for (var i = 0; i < sum.length; i++) {
+
+    final_result = final_result + sum[i]
+  }
+  console.log(final_result)
+
+  var final_result1 = 0
+  for (var i = 0; i < sum1.length; i++) {
+
+    final_result1 = final_result1 + sum1[i]
+  }
+  console.log(final_result1)
+
+  var final_result2 = 0
+  for (var i = 0; i < sum3.length; i++) {
+
+    final_result2 = final_result2 + sum3[i]
+  }
+  console.log(final_result2)
+  const final = final_result + final_result1 + final_result2
+  if (arr == 0) {
+    return null
+  }
+  return parseFloat((final/arr.length).toFixed(2))
+}
+
 // Progression 4.1: Array of numbers
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
@@ -219,6 +275,7 @@ function howManyTimesElementRepeated(wordsCount) {
     }
 
   }
+ 
   return count
 }
 // Progression #8: Bonus
